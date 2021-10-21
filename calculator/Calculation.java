@@ -1,4 +1,5 @@
 package calculator;
+import java.lang.Math;
 
 public class Calculation {
         Transformation transformation = new Transformation();
@@ -17,6 +18,9 @@ public class Calculation {
                 break;
             case '*':
                 result = number1 * number2;
+                break;
+            case '**':
+                result = (int) Math.pow(number1, number2);
                 break;
             default:
                 throw new IllegalStateException("Unexpected arithmetic operations: " + operation);
